@@ -1,0 +1,41 @@
+bugreports:
+  - summary: |
+      Исчез элемент со страницы магазина
+    environment: |
+      Версия 116.0.5845.111 (Официальная сборка), (64 бит)
+      Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    expected-result: |
+      Присутсвует кнопка "Предыдущая" для переключения между страницами
+    actual-result: |
+      Осталась кнопка "Следующая"
+
+  - summary: |
+      Некоррректо изменяется язык интерфейса
+    environment: |
+      Версия 116.0.5845.111 (Официальная сборка), (64 бит)
+      Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать "Язык"
+      3. Выбрать "Русский"
+      4. Нажать "Магазин"
+    expected-result: |
+      Язык интерфейса должен остаться на русском языке
+    actual-result: |
+      Язык интерфейса меняется на английский язык
+
+  - summary: |
+      Некорректное отображение элемента на странице 
+    environment: |
+      Версия 116.0.5845.111 (Официальная сборка), (64 бит)
+      Windows 10
+      steps-to-reproduce: |
+      1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Добавить в корзину товар "iPhone X" и "MacBook Pro"
+      3. Нажать "Корзина"
+      expected-result: |
+      На странице "Корзина" должно быть корректное отображение элементов на странице
+      actual-result: |
+      На странице "Корзина" кнопка "Удалить" смещается в сторону в зависимости от длины названия товара
